@@ -32,7 +32,6 @@ CREATE TABLE products (
     PRIMARY KEY (id)
 );
 
-
 CREATE TABLE categories (
     id SERIAL,
     name TEXT UNIQUE NOT NULL,
@@ -113,13 +112,6 @@ ADD CONSTRAINT fk_orders_employees
 FOREIGN KEY (employee_id)
 REFERENCES employees (id);
 
--- TODO create more tables here...
-
-
----
---- Add foreign key constraints
----
-
 -- PRODUCTS
 
 ALTER TABLE products
@@ -156,4 +148,3 @@ ALTER TABLE offices
 ADD CONSTRAINT fk_offices_territories
 FOREIGN KEY (territory_id)
 REFERENCES territories (id);
--- TODO create more constraints here...
